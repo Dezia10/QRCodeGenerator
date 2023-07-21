@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>QR Code Generator</title>
+  </head>
+  <body>
+    <h1>Enter a url to genearte a QR code</h1>
+    <form action="/" method="POST">
+      <input
+        type="text"
+        name="url"
+        placeholder="Insert link here"
+        class="label"
+      /><button type="submit">Generate QR Code</button>
+    </form>
+    <div class="qrcode">
+      <img src="{{data}}" alt="" />
+    </div>
+  </body>
+</html>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 100%;
+    height: 100vh;
+
+    background: #888;
+  }
+
+  h1 {
+    color: #222;
+    margin-top: 5rem;
+    font-style: italic;
+    text-align: center;
+  }
+
+  form {
+    /* width: 100%; */
+    margin-top: 3rem;
+  }
+
+  .label {
+    width: 700px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+    outline: none;
+  }
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+    outline: none;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  button:hover {
+    background-color: #777;
+  }
+
+  .qrcode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
